@@ -1,0 +1,54 @@
+theme = "dracula"
+
+[editor]
+line-number = "relative"
+mouse = true
+cursorline = true
+cursorcolumn = false
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+rulers = [90]
+auto-completion = true
+auto-format = true
+completion-trigger-len = 1
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 0
+
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+snippets = true

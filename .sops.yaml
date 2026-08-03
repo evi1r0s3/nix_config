@@ -1,0 +1,10 @@
+keys:
+  - &admin age1wktd802sf7a7rwa7lc72jrua2zhxz3fp47uddsrmww202g74sszsc47k5n
+  - &system age1aqqdwvmfsek3gnuh32zypnl9kjzhehj39kyl3xl0lgp34y62zevqjaghpa
+
+creation_rules:
+  - path_regex: ^secrets/.*
+    key_groups:
+      - age:
+          - *admin
+          - *system

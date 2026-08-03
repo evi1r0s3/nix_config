@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="start">
+        <property name="label">接入netbird网络</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="stop">
+        <property name="label">脱离netbird网络</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="restart">
+        <property name="label">重新接入</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1" />
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="update">
+        <property name="label">认证</property>
+      </object>
+    </child>
+  </object>
+</interface>

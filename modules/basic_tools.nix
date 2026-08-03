@@ -1,0 +1,38 @@
+{ nixpkgs-default, ... }:
+{
+    environment.systemPackages = with nixpkgs-default; [
+        wget
+        #cpufrequtils
+        git
+        p7zip
+        #ghostty
+        vlc
+        kdePackages.ark
+        curl
+        openssh
+        hyfetch
+        btop
+        iotop
+        iftop
+        strace
+        lsof
+        ethtool
+        which
+        file
+        gnutar
+        zip
+        unzip
+        xz
+        linux-wifi-hotspot
+        iw
+        uv
+        kitty
+        zellij
+        #vscode
+        firefox
+        vivaldi
+        vivaldi-ffmpeg-codecs
+        jq
+        foot
+    ];
+}

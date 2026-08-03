@@ -1,0 +1,12 @@
+-- hyprland config
+require("general")
+require("decoration")
+require("animations")
+require("input")
+require("keybinds")
+require("env")
+require("exec")
+require("workspaces")
+require("hardware")
+require("misc")
+require("wmrules")

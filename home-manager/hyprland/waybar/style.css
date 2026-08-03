@@ -1,0 +1,370 @@
+* {
+  all: unset;
+  font-family: "IntoneMono NF";
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 0;
+}
+
+/* 主背景 */
+/*
+shadow-color: rgb(025, 028, 033);
+background-color: rgb(040, 042, 054);
+border-color: rgb(255, 121, 198);
+font-color: rgb(248, 248, 242);
+*/
+/* 暗色模块背景 */
+/*
+dark-color-1: rgb(068, 071, 090);
+dark-color-2: rgb(099, 103, 131);
+dark-color-3: rgb(124, 128, 156);
+dark-color-4: rgb(153, 156, 178);
+*/
+/* 亮色模块背景 */
+/*
+red: rgb(255, 085, 085);
+orange: rgb(255, 158, 033);
+purple: rgb(116, 086, 148);
+green: rgb(080, 250, 123);
+*/
+/* 功能颜色 */
+/*
+yellow: rgb(241, 250, 140);
+white: rgb(248, 248, 242);
+cyan: rgb(139, 233, 253);
+*/
+
+/* === Main Background === */
+window#waybar {
+  background: rgb(040, 042, 054);
+}
+
+/* === Drop Shadow === */
+window#waybar>box {
+  background-color: transparent;
+  box-shadow: 0 0 2px 1px rgb(025, 028, 033);
+  margin: 2px;
+}
+
+/* === Tooltip === */
+tooltip {
+  background: rgb(040, 042, 054);
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 8px;
+  border-color: rgb(116, 086, 148);
+}
+
+tooltip label {
+  color: rgb(241, 250, 140);
+  font-weight: normal;
+  margin: 0.25px;
+}
+
+/* === menu === */
+menu {
+  color: rgb(241, 250, 140);
+  background: rgb(040, 042, 054);
+  border: solid;
+  border-width: 1.5px;
+  border-radius: 8px;
+  border-color: rgb(116, 086, 148);
+  font-weight: normal;
+  padding: 10px;
+}
+
+menu label {
+  /* 通过调整每个label的上下边距来改变行与行之间的间距 */
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+menuitem:hover {
+  color: rgb(139, 233, 253);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* ========= left ========= */
+#custom-left_logo {
+  color: rgb(080, 250, 123);
+  font-size: 11pt;
+}
+
+/* windows ctrl */
+/* rgb(040, 042, 054) */
+#custom-windows_ctrl {
+  color: rgb(248, 248, 242);
+  background: rgb(116, 086, 148);
+  text-shadow: 0 0 2px rgb(025, 028, 033);
+  box-shadow: 1px 0 2px 1px rgb(025, 028, 033);
+  border-radius: 10px;
+  margin: 2px 4px 2px 0;
+  padding-right: 6px;
+  padding-left: 9px;
+}
+
+/* workspaces */
+/* rgb(068, 071, 090) */
+/* #custom-left_1 {
+  color: rgb(068, 071, 090);
+  font-size: 11pt;
+} */
+
+#hyprland-workspaces {
+  color: rgb(248, 248, 242);
+  background: rgb(068, 071, 090);
+}
+
+/* #custom-left_2 {
+  color: rgb(068, 071, 090);
+  font-size: 11pt;
+} */
+
+/* tittle */
+/* rgb(040, 042, 054) */
+
+/* ========= center ========= */
+/* center left */
+/* rgb(068, 071, 090) */
+#custom-center_left_3 {
+  color: rgb(068, 071, 090);
+  background: rgb(040, 042, 054);
+  font-size: 11pt;
+}
+
+#custom-singbox {
+  color: rgb(080, 250, 123);
+  background-color: rgb(068, 071, 090);
+}
+
+#custom-netbird {
+  color: rgb(080, 250, 123);
+  background-color: rgb(068, 071, 090);
+}
+
+/* rgb(153, 152, 158) */
+#custom-center_left_2 {
+  color: rgb(197, 203, 210);
+  background: rgb(068, 071, 090);
+  font-size: 11pt;
+}
+
+#custom-cpuinfo {
+  color: rgb(040, 042, 054);
+  background-color: rgb(197, 203, 210);
+}
+
+/* rgb(189, 147, 249) */
+#custom-center_left_1 {
+  color: rgb(116, 086, 148);
+  background: rgb(197, 203, 210);
+  font-size: 11pt;
+}
+
+#custom-cpu {
+  color: rgb(040, 042, 054);
+  background-color: rgb(116, 086, 148);
+}
+
+#memory {
+  color: rgb(040, 042, 054);
+  background-color: rgb(116, 086, 148);
+}
+
+/* logo */
+/* rgb(080, 250, 123) */
+#custom-logo_left {
+  color: rgb(080, 250, 123);
+  background: rgb(116, 086, 148);
+  font-size: 11pt;
+}
+
+#custom-logo_left_in {
+  color: rgb(080, 250, 123);
+  background: rgb(080, 250, 123);
+  font-size: 11pt;
+}
+
+#custom-logo {
+  color: rgb(040, 042, 054);
+  background-color: rgb(080, 250, 123);
+}
+
+#custom-logo_right_in {
+  color: rgb(080, 250, 123);
+  background: rgb(080, 250, 123);
+  font-size: 11pt;
+}
+
+#custom-logo_right {
+  color: rgb(080, 250, 123);
+  background: rgb(116, 086, 148);
+  font-size: 11pt;
+}
+
+/* center right */
+/* rgb(189, 147, 249) */
+#clock.time {
+  color: rgb(040, 042, 054);
+  background-color: rgb(116, 086, 148);
+}
+
+#custom-center_right_3 {
+  color: rgb(116, 086, 148);
+  background: rgb(197, 203, 210);
+  font-size: 11pt;
+}
+
+/* rgb(153, 152, 158) */
+#clock.date {
+  color: rgb(040, 042, 054);
+  background-color: rgb(197, 203, 210);
+}
+
+#custom-center_right_2 {
+  color: rgb(197, 203, 210);
+  background: rgb(068, 071, 090);
+  font-size: 11pt;
+}
+
+/* rgb(068, 071, 090) */
+#custom-wifi {
+  color: rgb(080, 250, 123);
+  background-color: rgb(068, 071, 090);
+}
+
+#bluetooth {
+  color: rgb(080, 250, 123);
+  background-color: rgb(068, 071, 090);
+}
+
+#custom-center_right_1 {
+  color: rgb(068, 071, 090);
+  background: rgb(040, 042, 054);
+  font-size: 11pt;
+}
+
+/* ========= right ========= */
+/* Tray */
+/* rgb(040, 042, 054) */
+#tray {
+  color: rgb(248, 248, 242);
+  background: rgb(116, 086, 148);
+  text-shadow: 0 0 2px rgb(025, 028, 033);
+  box-shadow: 1px 0 2px 1px rgb(025, 028, 033);
+  border-radius: 10px;
+  margin: 2px 4px 2px 0;
+  padding-right: 6px;
+  padding-left: 9px;
+}
+
+/* == Mic == */
+/* rgb(040, 042, 054) */
+#custom-right_4 {
+  color: rgb(068, 071, 090);
+  background: rgb(040, 042, 054);
+  font-size: 11pt;
+}
+
+#custom-mic {
+  color: rgb(040, 042, 054);
+  background: rgb(068, 071, 090);
+}
+
+#custom-mic:hover {
+  color: rgb(139, 233, 253);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* == Output Device == */
+
+#custom-right_3 {
+  color: rgb(099, 103, 131);
+  background: rgb(068, 071, 090);
+  font-size: 11pt;
+}
+
+#pulseaudio {
+  color: rgb(040, 042, 054);
+  background: rgb(099, 103, 131);
+}
+
+#pulseaudio:hover {
+  color: rgb(139, 233, 253);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* == Brightness == */
+
+#custom-right_2 {
+  color: rgb(124, 128, 156);
+  background: rgb(099, 103, 131);
+  font-size: 11pt;
+}
+
+#backlight {
+  color: rgb(040, 042, 054);
+  background: rgb(124, 128, 156);
+}
+
+/* == Battery == */
+
+#custom-right_1 {
+  color: rgb(197, 203, 210);
+  background: rgb(124, 128, 156);
+  font-size: 11pt;
+}
+
+#battery {
+  background: rgb(197, 203, 210);
+}
+
+#battery.full {
+  color: #50FA7B;
+}
+
+#battery.good {
+  color: #FFB86C;
+}
+
+#battery.warning {
+  color: #F1FA8C;
+}
+
+#battery.critical {
+  color: #FF5555;
+}
+
+#battery.charging {
+  color: #8BE9FD;
+}
+
+/* rgb(197, 203, 210) */
+#custom-right_in_1 {
+  color: rgb(197, 203, 210);
+  background: rgb(040, 042, 054);
+  font-size: 12.2pt;
+  margin-bottom: -2px;
+}
+
+/* == Power Button == */
+#custom-power_control {
+  color: rgb(248, 248, 242);
+  background: rgb(116, 086, 148);
+  text-shadow: 0 0 2px rgb(025, 028, 033);
+  box-shadow: 1px 0 2px 1px rgb(025, 028, 033);
+  border-radius: 10px;
+  margin: 2px 4px 2px 0;
+  padding-right: 6px;
+  padding-left: 9px;
+}
+
+#custom-power_control:hover {
+  color: rgb(116, 086, 148);
+  background: rgb(248, 248, 242);
+  text-shadow: none;
+  box-shadow: none;
+}

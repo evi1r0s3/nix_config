@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+    <child>
+      <object class="GtkMenuItem" id="start">
+        <property name="label">启动</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="stop">
+        <property name="label">停止</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="restart">
+        <property name="label">重启</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1" />
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="update">
+        <property name="label">更新配置</property>
+      </object>
+    </child>
+  </object>
+</interface>

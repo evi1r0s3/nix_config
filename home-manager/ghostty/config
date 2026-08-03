@@ -1,0 +1,19 @@
+
+# --- Font ---
+font-family = "IntoneMono NFM"
+#font-family-bold = "IntoneMono NFM Bold"
+#font-family-italic = "JetBrainsMono NFM Italic"
+#font-family-bold-italic = "JetBrainsMono NFM ExtraBold Italic"
+font-codepoint-map = "U+4E00-U+9FFF,U+3400-U+4DBF=更纱黑体 SC"
+
+# --- Theme ---
+theme = "Dracula"
+
+# --- Cursor ---
+cursor-color = #bd93f9
+cursor-opacity = 0.5
+cursor-style = bar
+
+# --- TERM ---
+term = xterm-256color
+shell-integration-features = ssh-env
