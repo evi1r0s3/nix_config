@@ -28,10 +28,7 @@
 }:
 let
   desktopIcon = ./binaryninja.svg;
-  source = builtins.path {
-    path = ./binaryninja_linux_5.3.9434_personal.zip;
-    name = "binaryninja_linux_5.3.9434_personal";
-  };
+  source = ./binaryninja_linux_5.3.9434_personal.zip;
 in
 stdenv.mkDerivation rec {
   pname = "binaryninja";
