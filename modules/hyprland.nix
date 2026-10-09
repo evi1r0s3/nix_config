@@ -1,6 +1,6 @@
-{ nixpkgs-default, lib, user-name, ... }:
+{ nixpkgs-unstable, lib, user-name, ... }:
 {
-  environment.systemPackages = with nixpkgs-default; [
+  environment.systemPackages = with nixpkgs-unstable; [
     hyprpaper
     hyprcursor
     #xorg.xrdb
@@ -42,6 +42,7 @@
     enable = true;
     xwayland.enable = true;
     withUWSM = true; # recommended for most users
+    package = nixpkgs-unstable.hyprland;
   };
   # for x11 app supp
   services.xserver = {
@@ -72,7 +73,7 @@
     serviceConfig = {
       ExecStart = lib.mkForce [
         ""
-        "${nixpkgs-default.util-linux}/bin/agetty --autologin ${user-name} --noclear --keep-baud tty1 115200,38400,9600 $TERM"
+        "${nixpkgs-unstable.util-linux}/bin/agetty --autologin ${user-name} --noclear --keep-baud tty1 115200,38400,9600 $TERM"
       ];
     };
   };
@@ -102,7 +103,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${nixpkgs-default.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        ExecStart = "${nixpkgs-unstable.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
         Restart = "on-failure";
         RestartSec = 1;
         TimeoutStopSec = 10;

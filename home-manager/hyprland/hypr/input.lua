@@ -1,4 +1,4 @@
-hl.config = ({
+hl.config({
   input = {
     -- XKB 键盘参数
     kb_layout = "us",

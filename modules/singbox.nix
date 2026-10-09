@@ -399,6 +399,14 @@
         ' >> "$TEMP_CONFIG"
 
         # dns 控制 基于规则的
+        # 
+        #        {
+        #            "rule_set": [
+        #            "GeoSite-CN",
+        #            "GeoIP-CN"
+        #            ],
+        #            "server": "Local-DNS"
+        #        },
         echo '
             "dns": {
                 "servers": [
@@ -427,13 +435,6 @@
                 }
                 ],
                 "rules": [
-                {
-                    "rule_set": [
-                    "GeoSite-CN",
-                    "GeoIP-CN"
-                    ],
-                    "server": "Local-DNS"
-                },
                 {
                     "query_type": "HTTPS",
                     "action": "reject"

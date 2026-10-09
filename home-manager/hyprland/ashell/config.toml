@@ -1,20 +1,18 @@
-log_level = "error"
 outputs = { Targets = ["eDP-1"] }
 position = "Top"
-enable_esc_key = true
 
+[logging]
+level = "error"
 
 [modules]
 left = [ "leftlogo", [ "Workspaces", "WindowTitle" ] ]
-center = [ "Clock" ]
-right = [ "SystemInfo", "MediaPlayer", [ "Tray", "Privacy", "Settings" ] ]
+center = [ "Tempo" ]
+right = [ "SystemInfo", "MediaPlayer", [ "Tray", "SingBox", "Privacy", "Settings" ] ]
 
 #[updates]
 #check_cmd = "checkupdates; paru -Qua"
 #update_cmd = 'alacritty -e bash -c "paru; echo Done - Press enter to exit; read" &'
 #interval = 3600
-[clock]
-format = "%a %d %b %R"
 
 [workspaces]
 visibility_mode = "All"
@@ -26,7 +24,7 @@ truncate_title_after_length = 40
 
 ######## System Info ########
 [system_info]
-indicators = [ "Cpu", "Memory", "Temperature" ]
+indicators = [ "Cpu", "Memory", "Temperature", "IpAddress" ]
 interval = 10
 
 [system_info.cpu]
@@ -43,8 +41,16 @@ alert_threshold = 80
 sensor = "acpitz temp1"
 
 [tempo]
-clock_format = "%a %d %b %R"
-# formats = [ "%a %d %b %R", "%Y-%m-%d %H:%M:%S", "%H:%M:%S" ]
+clock_format = "%Y-%m-%d %A %H:%M:%S %p"
+#formats = [
+#    "%a %d %b %R",         # Mon 23 Dec 14:30
+#    "%Y-%m-%d %H:%M:%S",   # 2024-12-23 14:30:45
+#    "%d/%m/%Y %I:%M %p",   # 23/12/2024 02:30 PM
+#    "%A, %B %d, %Y",       # Monday, December 23, 2024
+#    "%H:%M:%S",            # 14:30:45 (updates every second)
+#    "%x",                  # Locale date (e.g., 12/23/24)
+#    "%X",                  # Locale time (e.g., 14:30:45)
+#]
 timezones = [ "Asia/Shanghai" ]
 weather_location = { City = "Nanjing" }
 weather_indicator = "IconAndTemperature"
@@ -56,7 +62,8 @@ audio_sources_more_cmd = "pavucontrol -t 4"
 wifi_more_cmd = "nm-connection-editor"
 vpn_more_cmd = "nm-connection-editor"
 bluetooth_more_cmd = "blueberry"
-battery_format = "IconAndPercentage"
+battery_format = "IconAndTime"
+keyboard_backlight_slider = true
 peripheral_battery_format = "Icon"
 audio_indicator_format = "Icon"
 microphone_indicator_format = "Icon"
@@ -73,36 +80,50 @@ status_command = "/path/to/check-keyboard-status.sh"
 tooltip = "Toggle On-Screen Keyboard"
 
 [[CustomModule]]
+name = "SingBox"
+icon = "󰏗 "
+type = "Button"
+command = "systemctl restart singbox"
+on_right_click = "systemctl stop singbox"
+
+[[CustomModule]]
 name = "leftlogo"
+type = "Button"
 icon = "EVANGELION 󱤓 󰫍󰫍󰫍 "
-command = ""
 [[CustomModule]]
 name = "left_head"
+type = "Button"
 icon = ""
-command = ""
 [[CustomModule]]
 name = "left_tail"
+type = "Button"
 icon = ""
-command = ""
 [[CustomModule]]
 name = "right_head"
+type = "Button"
 icon = ""
-command = ""
 [[CustomModule]]
 name = "right_tail"
+type = "Button"
 icon = ""
-command = ""
 
 ##################### theme #######################
 [appearance]
-style = "Solid"
-opacity = 1.0
-background_color = "#282A36"
+opacity = 0.9
 scale_factor = 1.5
-primary_color = "#FF79C6"
-secondary_color = "#282A36"
+
 success_color = "#50FA7B"
 danger_color = "#FF5555"
 text_color = "#BD93F9"
+
 workspace_colors = [ "#BD93F9", "#50FA7B" ]
 special_workspace_colors = [ "#BD93F9", "#50FA7B" ]
+
+[appearance.bar]
+surface = "solid"
+
+[appearance.primary_color]
+base = "#FF79C6"
+
+[appearance.background_color]
+base = "#282A36"

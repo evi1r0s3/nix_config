@@ -1,9 +1,9 @@
-hl.config = ({
+hl.config({
   decoration = {
     -- 圆角半径（像素为单位）
-    rounding = 10,
+    rounding = 15,
     -- 曲率
-    rounding_power = 2.0,
+    rounding_power = 2.5,
     -- 活动窗口的不透明度。[0.0 - 1.0]
     active_opacity = 1.0,
     -- 非活动窗口的不透明度。[0.0 - 1.0]
@@ -23,11 +23,11 @@ hl.config = ({
     -- 指向要在渲染结束时应用的自定义着色器的路径。examples/screenShader.frag
     -- screen_shader =
     -- 窗口边框是否应该成为窗口的一部分
-    border_part_of_window = false,
+    -- border_part_of_window = false,
     -- 模糊
     blur = {
       -- 启用窗口背景模糊
-      eabled = true,
+      enabled = true,
       -- 模糊大小（距离）
       size = 5,
       -- 模糊执行的次数
@@ -49,12 +49,10 @@ hl.config = ({
       render_power = 3,
       -- 启用后，阴影会变得非常锐利，类似于无限渲染能力。
       sharp = false,
-      -- 如果属实，阴影不会出现在窗户后面，而只会出现在窗户周围。
-      ignore_window = true,
       -- 阴影的颜色。Alpha 值决定阴影的不透明度。
       color = "rgba(1a1a1aee)",
     },
     -- Glow = {},
     -- motion_blur = {},
-  }
+  },
 })

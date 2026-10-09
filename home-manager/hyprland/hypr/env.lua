@@ -13,10 +13,10 @@ hl.env("HYPRCURSOR_SIZE", "48")
 hl.env("LANG", "zh_CN.UTF-8")
 
 -- HiDPI
-hl.config = ({
+hl.config({
   xwayland = {
-    force_zero_scaline = true
-  }
+    force_zero_scaling = true
+  },
 })
 --
 hl.env("QT_QPA_PLATFORMTHEME", "hyprqt6engine")

@@ -30,8 +30,6 @@
         zellij
         #vscode
         firefox
-        vivaldi
-        vivaldi-ffmpeg-codecs
         jq
         foot
     ];
